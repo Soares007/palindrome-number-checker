@@ -1,0 +1,39 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" id="num" class="form-control" placeholder="Insira um Número">
+        <input type="button" onclick="palindromeChecker()">
+    </form>
+    <script>
+        function palindromeChecker() {
+
+            var valorFinal = document.getElementById("num").value;
+
+            var reverso = valorFinal.split("").reverse().join("");
+            if (valorFinal.trim() == '') {
+                return alert("Porfavor insira um numero!");
+            } else {
+                if (reverso === valorFinal) {
+                    return alert(valorFinal + " é um palindromo");
+                } else {
+                    return alert(valorFinal + " não é um palindromo");
+                }
+            }
+        }
+
+    </script>
+    <script type="text/javascript" src="js/jquery-slim.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
